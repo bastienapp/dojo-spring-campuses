@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Training for digital jobs - Wild Code School</title>
@@ -8,22 +8,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-<header th:fragment ="top (logged)">
-    <section class="section-header">
-        <a href="#index">
-            <img alt="Wild Code School logo" src="https://via.placeholder.com/150x50">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/campuses">Campuses</a></li>
-                <li>
-                    <a href="#sign-in" th:if="${not logged}">Sign In</a>
-                    <a href="#sign-in" th:if="${logged}">Sign Out</a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-</header>
-</footer>
+
+<!-- TODO -->
+
 </body>
 </html>

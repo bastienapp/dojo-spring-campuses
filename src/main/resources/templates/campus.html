@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Training for digital jobs - Wild Code School</title>
@@ -8,19 +8,39 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-<header th:replace ="/fragments/header.html :: top (${logged})">
-    
+<header>
+    <section class="section-header">
+        <a href="#index">
+            <img alt="Wild Code School logo" src="https://via.placeholder.com/150x50">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/campuses">Campuses</a></li>
+                <li>
+                    <a href="#sign-in">Sign In</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
 </header>
 <section class="section-apply">
-    <h1>Wild Code School</h1>
-    <h2>Learn tech skills with passion</h2>
-    <a href="#apply-now">Apply now</a>
+    <h1>Hello Student</h1>
 </section>
 <section class="section-article">
-    <article th:each="campus : ${listCampus}">
-        <h3 th:text="${campus.city}">City</h3>
-        <p th:text="${campus.description}">Description</p>
-        <a href="/team/nantes" th:href="@{campus.ourTeam}">Notre équipe</a>
+    <article>
+        <h3>City</h3>
+        <p>Description</p>
+        <a href="/team/city">Notre équipe</a>
+    </article>
+    <article>
+        <h3>City</h3>
+        <p>Description</p>
+        <a href="/team/city">Notre équipe</a>
+    </article>
+    <article>
+        <h3>City</h3>
+        <p>Description</p>
+        <a href="/team/city">Notre équipe</a>
     </article>
 </section>
 <footer>
