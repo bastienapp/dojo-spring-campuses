@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Training for digital jobs - Wild Code School</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+<header th:fragment ="top (logged)">
+    <section class="section-header">
+        <a href="#index">
+            <img alt="Wild Code School logo" src="https://via.placeholder.com/150x50">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/campuses">Campuses</a></li>
+                <li>
+                    <a href="#sign-in" th:if="${not logged}">Sign In</a>
+                    <a href="#sign-in" th:if="${logged}">Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>
+</footer>
+</body>
+</html>

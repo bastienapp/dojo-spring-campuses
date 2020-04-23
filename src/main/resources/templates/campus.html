@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Training for digital jobs - Wild Code School</title>
@@ -8,18 +8,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-<header>
-    <section class="section-header">
-        <a href="#index">
-            <img alt="Wild Code School logo" src="https://via.placeholder.com/150x50">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/campuses">Campuses</a></li>
-                <li><a href="#sign-in">Sign In</a></li>
-            </ul>
-        </nav>
-    </section>
+<header th:replace ="/fragments/header.html :: top (${logged})">
+    
 </header>
 <section class="section-apply">
     <h1>Wild Code School</h1>
@@ -27,20 +17,10 @@
     <a href="#apply-now">Apply now</a>
 </section>
 <section class="section-article">
-    <article>
-        <h3>Nantes</h3>
-        <p>Recalcitrantes formidine praefectum quid iratus postulat rebellis nimirum quodam inusitato per incusat novo iratus nimirum.</p>
-        <a href="/team/nantes">Notre équipe</a>
-    </article>
-    <article>
-        <h3>Toulouse</h3>
-        <p>Vel quarum arva initium in sunt pari Blemmyarum diversa lare eorum soli nec eorum idem.</p>
-        <a href="/team/toulouse">Notre équipe</a>
-    </article>
-    <article>
-        <h3>Paris</h3>
-        <p>Praeter Epicuri mihi autem omnes quorum omnes mentitum nihil probarem ille frequenter nostro autem mihi.</p>
-        <a href="/team/paris">Notre équipe</a>
+    <article th:each="campus : ${listCampus}">
+        <h3 th:text="${campus.city}">City</h3>
+        <p th:text="${campus.description}">Description</p>
+        <a href="/team/nantes" th:href="@{campus.ourTeam}">Notre équipe</a>
     </article>
 </section>
 <footer>
