@@ -1,0 +1,131 @@
+/* Don't touch this ! */
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6em;
+}
+
+body, h1, h2, h3, ul, li, a, p {
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article p {
+    font-size: 0.8em;
+    padding: 10px;
+}
+
+footer {
+    font-size: 0.8em;
+}
+
+/* Your code here */
+body {
+    --main-text-color: #39424E;
+    --apply-color: #F76C6C;
+    color: var(--main-text-color);
+}
+
+a {
+    color: var(--main-text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 0.5rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header a {
+    width: 50%;
+}
+
+.section-header img {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 0 0.25rem;
+}
+
+.section-apply {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-apply h1, .section-apply h2 {
+    text-align: center;
+}
+
+.section-apply a {
+    color: white;
+    background-color: var(--apply-color);
+    padding: 0.5rem;
+    border-radius: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+article p {
+    padding: 0.5rem 0 0;
+}
+article a {
+    font-size: 0.7em;
+    display: inline-block;
+    color: var(--apply-color);
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--main-text-color);
+}
+
+footer li:first-child {
+    font-weight: bold;
+}
+
+footer a, footer li, footer section p {
+    color: white;
+}
+
+footer ul {
+    padding-bottom: 0.5rem;
+}
+
+footer ul:last-child {
+    padding-bottom: 0;
+}
+
+footer li, footer section p {
+    text-align: center;
+}
+
+.section-copyright {
+    padding-top: 0;
+}
